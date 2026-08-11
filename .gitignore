@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+artifacts/replays/*.json
+artifacts/reports/*.csv
+artifacts/reports/*.json
+submissions/*.tar.gz
+
+# Keep downloaded official documents, but ignore the original archive.
+docs/official/*.zip
+
+.kaggle/
+kaggle.json
+

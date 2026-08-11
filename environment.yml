@@ -1,0 +1,11 @@
+name: kagri
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - kaggle-environments==1.32.6
+      - kaggle==2.2.4
+      - pytest>=8.0,<10
+
