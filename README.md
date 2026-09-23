@@ -16,7 +16,21 @@ Kaggleの対戦型農場経営シミュレーション「Kaggriculture」用リ�
 
 `obs`はobservationの略で、現在の農場、所持金、市場価格、作物、相手の公開農場などの観測情報です。`agent(obs)`は、その情報を受け取り、農夫、雇用した作業員、市場注文の行動を返します。
 
-## 現在のベースライン
+## 現在の最高スコア
+
+ルートの`main.py`は、公開Notebook [The 2965 Master Hybrid Engine](https://www.kaggle.com/code/haideptry/the-2965-master-hybrid-engine) を監査し、複数の強い公開エージェントとのローカル対戦を通過した提出版です。
+
+- Public Score: `2562.8`
+- Kaggle提出ID: `56464426`
+- 提出タイトル: `2965 Hybrid broad pool 36-4`
+- SHA-256: `93831c18a43c49312a71fa67171224681c52c3fade0259403e8d8fae7973565f`
+- ローカル検証: Pipe18、V56、Fieldcraft、V45に対して両席合計`36勝4敗`
+
+このエージェントは、終盤の不要な種購入を抑える処理、最終日前の肥料購入停止、価格を見た売却タイミング調整、在庫上限への対処を組み合わせています。提出物は`main.py`だけで完結し、外部通信や実行時の外部データ読み込みはありません。
+
+再現用ファイルは`agents/hybrid2965/main.py`、Kaggleへ送ったアーカイブは`submissions/hybrid2965-2562.8.tar.gz`、ローカル対戦結果は`artifacts/reports/hybrid2965_broad_pool_20260922.csv`です。
+
+## 初期ベースライン
 
 ルートの`main.py`は、公開Notebook [Kaggriculture Baseline](https://www.kaggle.com/code/prvsiyan/kaggriculture-baseline) から正確に展開したベースラインです。
 
