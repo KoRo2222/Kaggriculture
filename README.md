@@ -18,17 +18,17 @@ Kaggleの対戦型農場経営シミュレーション「Kaggriculture」用リ�
 
 ## 現在の最高スコア
 
-ルートの`main.py`は、公開Notebook [The 2965 Master Hybrid Engine](https://www.kaggle.com/code/haideptry/the-2965-master-hybrid-engine) を監査し、複数の強い公開エージェントとのローカル対戦を通過した提出版です。
+ルートの`main.py`は、公開Notebook [kaggriculture hybu submit](https://www.kaggle.com/code/wzhengbiao/kaggriculture-hybu-submit) の提出物を監査し、複数の強い公開エージェントとのローカル対戦を通過したHYBU版です。
 
-- Public Score: `2562.8`
-- Kaggle提出ID: `56464426`
-- 提出タイトル: `2965 Hybrid broad pool 36-4`
-- SHA-256: `93831c18a43c49312a71fa67171224681c52c3fade0259403e8d8fae7973565f`
-- ローカル検証: Pipe18、V56、Fieldcraft、V45に対して両席合計`36勝4敗`
+- Public Score: `2419.3`（2026-09-24確認時。対戦型レーティングのため変動する）
+- Kaggle提出ID: `56486033`
+- 提出タイトル: `HYBU V15-V57 broad pool 71-19`
+- SHA-256: `f6175fd1bc3850f74185e7a813bb5a87d54e7e15212c874133dafc6e1ce91d34`
+- ローカル検証: Hybrid2965、Pipe18、V56、Fieldcraft、Herd-Safeなどに対して両席合計`71勝19敗`
 
-このエージェントは、終盤の不要な種購入を抑える処理、最終日前の肥料購入停止、価格を見た売却タイミング調整、在庫上限への対処を組み合わせています。提出物は`main.py`だけで完結し、外部通信や実行時の外部データ読み込みはありません。
+このエージェントは、V15の販売順序探索・売却前倒し・終盤在庫回収と、V57の資金到着順を守る注文制約を統合しています。さらに埋め込み済み公開リプレイから相手の販売時刻を推定します。実行時の外部通信や外部ファイル読み込みはありませんが、公開メタへの過適合リスクは残るため、未知seedと複数系統の相手で検証しています。
 
-再現用ファイルは`agents/hybrid2965/main.py`、Kaggleへ送ったアーカイブは`submissions/hybrid2965-2562.8.tar.gz`、ローカル対戦結果は`artifacts/reports/hybrid2965_broad_pool_20260922.csv`です。
+再現用ファイルは`agents/hybu/main.py`、Kaggleへ送ったアーカイブは`submissions/hybu-2419.3.tar.gz`、主要なローカル対戦結果は`artifacts/reports/hybu_broad_pool_20260923.csv`と`artifacts/reports/hybu_confirmation_20260923.csv`です。
 
 ## 初期ベースライン
 
